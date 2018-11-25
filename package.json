@@ -1,0 +1,22 @@
+{
+  "name": "metro-tweets-clasification",
+  "version": "1.0.0",
+  "description": "A tool to classify tweets into some categories",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "bulma": "^0.7.2",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.13",
+    "node-uuid": "^1.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test $,specified\" && exit 1",
+    "build": "babel-node app.js"
+  },
+  "author": "",
+  "license": "MIT"
+}

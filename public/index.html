@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    </head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="py-5 text-center">
+            <h1>Clasificador de Tweets</h1>
+            <p class="lead">Clasifica los siguientes tweets según la clase que sean:</p>
+            <p class="lead">Incidencia: Retraso, Averia, Tren no aparece, ... cualquier cosa que afecte a que los usuarios llegen a tiempo</p>
+            <p class="lead">Queja: Aire acondicionado, perros sin bozal, altavoces estropeados, suciedad... cualquier cosa que afecta a la calidad del metro pero sigues llegando puntual</p>
+        </div>
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="tweetMessage">Tweet</label>
+                    <div id="alertDiv"></div>
+                    <textarea class="form-control" id="tweetMessage" rows="4" cols="80" disabled></textarea>
+                    <p id="tweetId" class="text-right"> - </p>
+                    <hr class="row">
+                    <button type="button" class="btn btn-secondary btn-lg btn-block" id="nada">Nada</button>
+                    <button type="button" class="btn btn-warning btn-lg btn-block" id="queja">Queja</button>
+                    <button type="button" class="btn btn-danger btn-lg btn-block" id="incidencia">Incidencia</button>
+                   
+                </div>
+            </form>
+        </div>
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
