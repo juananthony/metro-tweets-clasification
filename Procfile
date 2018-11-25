@@ -1,1 +1,1 @@
-userworker: npm run build
+userworker: npm start

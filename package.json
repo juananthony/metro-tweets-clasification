@@ -15,7 +15,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test $,specified\" && exit 1",
-    "build": "babel-node app.js"
+    "build": "babel-node app.js",
+    "start": "babel-node app.js"
   },
   "author": "",
   "license": "MIT"
