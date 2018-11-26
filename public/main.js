@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function setClassification(classification) {
-        tweet.classified = "nothing";
+        tweet.classified = classification;
 
         var request = new XMLHttpRequest();
 
