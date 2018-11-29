@@ -16,12 +16,16 @@
             <p class="lead">Incidencia: Retraso, Averia, Tren no aparece, ... cualquier cosa que afecte a que los usuarios llegen a tiempo</p>
             <p class="lead">Queja: Aire acondicionado, perros sin bozal, altavoces estropeados, suciedad... cualquier cosa que afecta a la calidad del metro pero sigues llegando puntual</p>
         </div>
+        <hr class="row">
         <div class="row">
             <form>
                 <div class="form-group">
-                    <hr class="row">
-                    <label for="tweetMessage">Tweet</label>
+                    <h4>Usuario:</h4>
+                    <a href="#" id="enlaceUsuario" target="_blank" rel="noopener noreferrer"><p id="usuario"></p></a>
+                    <label class="h4" for="tweetMessage">Tweet</label>
                     <div id="alertDiv"></div>
+                    <p class="mb-0"><small id="fecha"></small></p>
+                    <a id="tweetUrl" target="_blank" rel="noopener noreferrer"><p class="mb-0"><small>Ver en Twitter</small></p></a>
                     <textarea class="form-control" id="tweetMessage" rows="8" cols="80" disabled></textarea>
                     <p id="tweetId" class="text-right"> - </p>
                     <button type="button" class="btn btn-secondary btn-lg btn-block" id="nada">Nada</button>
@@ -38,4 +42,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
+<footer class="container mb-4">
+    <hr class="row">
+    <p class="mt-4">Creado por Juan Antonio Jiménez López</p>
+    <p><a href="https://github.com/juananthony/metro-tweets-clasification">Github</a></p>
+</footer>
 </html>
