@@ -1,6 +1,5 @@
 import mongoose from '../db.js';
 import uuid from 'node-uuid';
-import UserSchema from './user';
 
 const TweetSchema = mongoose.Schema({
     id: Number,
