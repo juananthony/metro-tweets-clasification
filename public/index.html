@@ -5,7 +5,7 @@
         <title>Clasificador de tweets</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <link href="./css/open-iconic-bootstrap.css" rel="stylesheet">
     </head>
 
 <body class="bg-light">
@@ -20,6 +20,10 @@
         <div class="row px-2">
             <form>
                 <div class="form-group">
+                    <div class="float-right" id="deshacer" style="line-height: 0;text-align: center;cursor:pointer;">
+                        <span class="oi oi-action-undo h3 mb-0"></span>
+                        <p class=""><small id="">Deshacer</small></p>
+                    </div>
                     <h4>Usuario:</h4>
                     <a href="#" id="enlaceUsuario" target="_blank" rel="noopener noreferrer"><p id="usuario"></p></a>
                     <label class="h4" for="tweetMessage">Tweet</label>

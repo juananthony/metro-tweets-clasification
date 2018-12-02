@@ -30,7 +30,21 @@ tweetsRouter.route('/')
         })
     });
     
-tweetsRouter.route('/:id').post(bodyParser.json(), (request, response) => {
+tweetsRouter.route('/:id')
+    .get((request, response) => {
+        console.log("GET /tweets/" + request.params.id);
+        //var query = tweetModel.find({classified: {$exists: false}}).limit(-1).skip(1).next();
+        var query = tweetModel.find({_id: request.params.id});
+        query.exec((err, tweets) => {
+            console.log("received ... " + tweets.length)
+            if(tweets !== undefined) {
+                response.json(tweets[0]);
+            } else {
+                response.json('{error: "no tweets left"}');
+            }
+        })
+    })
+    .post(bodyParser.json(), (request, response) => {
         console.log("POST /tweets/" + request.body.id);
         console.log(" > body: " + request.body.classified);
         var query = tweetModel.findOneAndUpdate(
