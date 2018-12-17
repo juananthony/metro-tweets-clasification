@@ -48,7 +48,7 @@ tweetsRouter.route('/:id')
         console.log("POST /tweets/" + request.body.id_str);
         console.log(" > body: " + request.body.classified);
         var query = tweetModel.findOneAndUpdate(
-            {id_str: request.params.id_str}, 
+            {id_str: request.params.id}, 
             {$set: {classified: request.body.classified}},
             {new: true},
             (err, tweetObj) => {
