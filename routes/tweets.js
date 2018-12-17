@@ -45,10 +45,10 @@ tweetsRouter.route('/:id')
         })
     })
     .post(bodyParser.json(), (request, response) => {
-        console.log("POST /tweets/" + request.body.id);
+        console.log("POST /tweets/" + request.body.id_str);
         console.log(" > body: " + request.body.classified);
         var query = tweetModel.findOneAndUpdate(
-            {id: parseInt(request.params.id)}, 
+            {id_str: request.params.id_str}, 
             {$set: {classified: request.body.classified}},
             {new: true},
             (err, tweetObj) => {

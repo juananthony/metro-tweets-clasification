@@ -3,6 +3,7 @@ import uuid from 'node-uuid';
 
 const TweetSchema = mongoose.Schema({
     id: Number,
+    id_str: String,
     text: String,
     classified: String,
     user: {

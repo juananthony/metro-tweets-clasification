@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
    }
 
    function getTweetUrl() {
-        return TWITTER_URL + tweet.user.screen_name + "/status/" + tweet.id;
+        return TWITTER_URL + tweet.user.screen_name + "/status/" + tweet.id_str;
     }
 
     function clone(obj) {
@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showTweet() {
         document.getElementById("tweetMessage").value = tweet.text;
-        document.getElementById("tweetId").innerHTML = "id: " + tweet.id;
-        document.getElementById("usuario").innerHTML = tweet.user.name + " (@" + tweet.user.screen_name + " - " + tweet.user.id + ")";
+        document.getElementById("tweetId").innerHTML = "id: " + tweet.id_str;
+        document.getElementById("usuario").innerHTML = tweet.user.name + " (@" + tweet.user.screen_name + " - " + tweet.user.id_str + ")";
         document.getElementById("enlaceUsuario").setAttribute("href", getUserUrl());
         document.getElementById("fecha").innerHTML = getDate(new Date(parseInt(tweet.timestamp_ms)));
         document.getElementById("tweetUrl").setAttribute("href", getTweetUrl());
@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     tweet = {
                         _id: data._id,
                         id: data.id,
+                        id_str: data.id_str,
                         text: data.text,
                         user: data.user,
                         created_at: data.created_at,
@@ -127,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     tweet = {
                         _id: data._id,
                         id: data.id,
+                        id_str: data.id_str,
                         text: data.extended_tweet.full_text,
                         user: data.user,
                         created_at: data.created_at,
@@ -157,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     tweet = {
                         _id: data._id,
                         id: data.id,
+                        id_str: data.id_str,
                         text: data.text,
                         user: data.user,
                         created_at: data.created_at,
@@ -166,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     tweet = {
                         _id: data._id,
                         id: data.id,
+                        id_str: data.id_str,
                         text: data.extended_tweet.full_text,
                         user: data.user,
                         created_at: data.created_at,
@@ -190,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var request = new XMLHttpRequest();
 
-        request.open('POST', '/tweets/' + tweet.id);
+        request.open('POST', '/tweets/' + tweet.id_str);
         request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         request.onload = function() {
             if (request.status >= 200 && request.status < 400) {
