@@ -11,7 +11,6 @@ tweetsRouter.route('/')
 
     .get((request, response) => {
         console.log("GET /tweets")
-        //var query = tweetModel.find({classified: {$exists: false}}).limit(-1).skip(1).next();
         var query = tweetModel.aggregate([
             {
                 $match: {classified: {$exists: false}}
@@ -33,7 +32,6 @@ tweetsRouter.route('/')
 tweetsRouter.route('/:id')
     .get((request, response) => {
         console.log("GET /tweets/" + request.params.id);
-        //var query = tweetModel.find({classified: {$exists: false}}).limit(-1).skip(1).next();
         var query = tweetModel.find({_id: request.params.id});
         query.exec((err, tweets) => {
             console.log("received ... " + tweets.length)
@@ -46,7 +44,6 @@ tweetsRouter.route('/:id')
     })
     .post(bodyParser.json(), (request, response) => {
         console.log("POST /tweets/" + request.body.id_str);
-        console.log(" > body: " + request.body.classified);
         var query = tweetModel.findOneAndUpdate(
             {id_str: request.params.id}, 
             {$set: {classified: request.body.classified}},
