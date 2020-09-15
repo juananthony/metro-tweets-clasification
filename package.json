@@ -9,7 +9,7 @@
     "body-parser": "^1.18.3",
     "bulma": "^0.7.2",
     "express": "^4.16.4",
-    "mongoose": "^5.3.13",
+    "mongoose": "^5.7.5",
     "node-uuid": "^1.4.8"
   },
   "devDependencies": {},
